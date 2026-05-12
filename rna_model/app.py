@@ -9,6 +9,7 @@ from tensorflow.keras.models import load_model
 
 app = Flask(__name__)
 
+print("Cargando modelo RNA...")
 
 model = load_model(
     "modelo_recompra.h5"
@@ -17,6 +18,15 @@ model = load_model(
 scaler = joblib.load(
     "scaler.pkl"
 )
+
+print("Modelo cargado correctamente")
+
+
+@app.route("/")
+def home():
+
+    return "StackFlow RNA API funcionando"
+
 
 @app.route(
     "/predict",
