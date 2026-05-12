@@ -1,5 +1,5 @@
 flask
-tensorflow==2.17.1
+tensorflow-cpu
 numpy
 pandas
 scikit-learn
